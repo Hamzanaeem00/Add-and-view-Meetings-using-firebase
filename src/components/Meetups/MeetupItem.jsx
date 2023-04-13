@@ -4,8 +4,11 @@ import Card from '../Ui/Card';
 import { useContext } from 'react';
 import FavoritesContext from '../../store/favorites-context';
 function MeetupItem(props) {
+  
+  // console.log(props);
   const favoritesCtx =useContext(FavoritesContext);
   const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id)
+  console.log(itemIsFavorite);
   function toggleFavoriteStatusHandler(){
     if(itemIsFavorite){
       favoritesCtx.removeFavorite(props.id);
@@ -18,6 +21,7 @@ function MeetupItem(props) {
         description: props.description
       })
     }
+    console.log("favoritesitem ===> ",favoritesCtx);
 
   }
   return (

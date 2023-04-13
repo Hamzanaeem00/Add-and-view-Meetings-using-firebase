@@ -6,7 +6,7 @@ import NewMeetupForm from '../components/Meetups/NewMeetupForm'
 function NewMeetupsPage() {
   const history = useHistory();
   function AddMeetupHandler(meetupData){
-    fetch('https://react-getting-started-2e088-default-rtdb.firebaseio.com/meetups.json',
+    fetch('https://project-meeting-aeeb7-default-rtdb.firebaseio.com/meetups.json',
     {
       method: 'POST',
       body: JSON.stringify(meetupData),
